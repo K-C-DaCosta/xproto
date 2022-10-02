@@ -7,7 +7,7 @@ fn main() {
     xserver
         .set_read_timeout(Some(std::time::Duration::from_millis(30)))
         .unwrap();
-    
+
     let mut ctx = RequestConnection::new(ByteOrder::LittleEndian, 11, 0, AuthProtocol::None)
         .connect(xserver)
         .unwrap();
@@ -16,6 +16,7 @@ fn main() {
         .with_width(512)
         .with_height(512)
         .with_pos((128, 128))
+        .with_title("my xlib client sucks")
         .build()
         .unwrap();
 

@@ -14,7 +14,7 @@ mod xtypes;
 /// module containing common x constants
 mod xconsts;
 
-use xio::write_primitive;
+use xio::{write_padding, write_primitive};
 
 pub use self::{connection::*, xconsts::*, xtypes::*};
 
@@ -133,6 +133,7 @@ pub struct WindowBuilder<'a, T> {
     value_mask: CARD32,
     value_list: Vec<WindowValue>,
     window_id: Atom,
+    title: &'a str,
 }
 impl<'a, T> WindowBuilder<'a, T>
 where
@@ -143,8 +144,9 @@ where
         let window_id = Atom(state.gen_id());
         unsafe {
             let res = res_unitit.assume_init_mut();
+            res.title = "";
             res.window_id = window_id;
-            res.opcode = 1;
+            res.opcode = opcodes::CREATE_WINDOW;
             res.request_length = 8;
             res.wid = window_id;
             res.parent = state.info.list_of_screen[0].root;
@@ -187,6 +189,11 @@ where
         self
     }
 
+    pub fn with_title(mut self, title: &'a str) -> Self {
+        self.title = title;
+        self
+    }
+
     pub fn build(self) -> Result<(), io::Error> {
         {
             xio::write_primitive(&mut self.ctx.socket, self.opcode)?;
@@ -212,6 +219,24 @@ where
 
         map_window(&mut self.ctx.socket, self.window_id.0)?;
 
+        if self.title.is_empty() == false {
+            change_property(
+                &mut self.ctx.socket,
+                PropertyMode::Replace,
+                xconsts::predefined_atoms::WM_NAME,
+                xconsts::predefined_atoms::STRING,
+                self.window_id.0,
+                PropertyFormat::Bytes,
+                self.title,
+            )?;
+
+            if let Ok(header) = xio::read_primitive::<XErrorHeader, _>(&mut self.ctx.socket) {
+                let err = XError::from_header(header);
+                println!("err = {:?}", err);
+            } else {
+                println!("no errors");
+            }
+        }
         Ok(())
     }
 }
@@ -234,8 +259,62 @@ impl<Socket: io::Read + io::Write> XContext<Socket> {
 }
 
 pub fn map_window<S: io::Write>(mut socket: S, window_id: CARD32) -> io::Result<()> {
-    write_primitive(&mut socket, 8u8)?;
+    write_primitive(&mut socket, opcodes::MAP_WINDOW)?;
     write_primitive(&mut socket, 0u8)?;
     write_primitive(&mut socket, 2u16)?;
     write_primitive(&mut socket, window_id)
+}
+
+#[derive(Copy, Clone)]
+pub enum PropertyMode {
+    Replace = 0,
+    Prepend = 1,
+    Append = 2,
+}
+
+#[derive(Copy, Clone)]
+pub enum PropertyFormat {
+    Bytes = 8,
+    Shorts = 16,
+    Word = 32,
+}
+pub fn change_property<S: io::Write, T: AsRef<[u8]>>(
+    mut socket: S,
+    mode: PropertyMode,
+    property: Atom,
+    ptype: Atom,
+    window_id: CARD32,
+    format: PropertyFormat,
+    data: T,
+) -> io::Result<()> {
+    let mode = mode as u8;
+    let data = data.as_ref();
+    let padding = (4 - data.len() as u16 % 4) % 4;
+    let request_len = 6 + (data.len() as u16 + padding) / 4;
+    let format_log = ((format as u32) - 1).count_ones();
+    let divisor = format_log - 3;
+    /*
+       format|exp form| fract| rshift
+       -----------------------------
+       8     | 2^3    | 1/1  |  >> 0
+       16    | 2^4    | 1/2  |  >> 1
+       32    | 2^5    | 1/4  |  >> 2
+
+       divisor = 2^(log_2(format)-3)
+       fract = 1/divisor
+       rshift = divisor
+    */
+    let length_of_data_in_format_units = data.len() as u32 >> divisor;
+    write_primitive(&mut socket, opcodes::CHANGE_PROPERTY)?;
+    write_primitive(&mut socket, mode)?;
+    write_primitive(&mut socket, request_len)?;
+    write_primitive(&mut socket, window_id)?;
+    write_primitive(&mut socket, property)?;
+    write_primitive(&mut socket, ptype)?;
+    write_primitive(&mut socket, format as u8)?;
+    write_primitive(&mut socket, &[0u8; 3][..])?; //unused
+    write_primitive(&mut socket, length_of_data_in_format_units)?;
+    socket.write_all(data)?;
+    write_padding(data.len(), &mut socket)?;
+    Ok(())
 }
