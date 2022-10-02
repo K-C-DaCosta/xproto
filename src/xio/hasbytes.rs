@@ -1,6 +1,18 @@
+use crate::Atom;
+
 pub trait HasBytes {
     fn as_bytes_le<'a>(&self, buffer: &'a mut [u8; 16]) -> &'a [u8];
     fn as_bytes_be<'a>(&self, buffer: &'a mut [u8; 16]) -> &'a [u8];
+}
+
+impl HasBytes for Atom {
+    fn as_bytes_le<'a>(&self, buffer: &'a mut [u8; 16]) -> &'a [u8] {
+        copy_array_then_slice(self.0.to_le_bytes(), buffer)
+    }
+
+    fn as_bytes_be<'a>(&self, buffer: &'a mut [u8; 16]) -> &'a [u8] {
+        copy_array_then_slice(self.0.to_be_bytes(), buffer)
+    }
 }
 
 impl HasBytes for &[u8] {
@@ -132,11 +144,3 @@ fn copy_array_then_slice<const N: usize>(data: [u8; N], buffer: &mut [u8; 16]) -
     &buffer[0..len]
 }
 
-fn copy_slice_then_slice<'a>(data: &[u8], buffer: &'a mut [u8; 16]) -> &'a [u8] {
-    let len = data.len();
-    buffer
-        .iter_mut()
-        .zip(data.iter())
-        .for_each(|(out, &dat)| *out = dat);
-    &buffer[0..len]
-}

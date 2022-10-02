@@ -1,0 +1,4135 @@
+unused = 0
+major = 11
+minor = 0
+additional_data = 3075
+release_number = 12013000
+resource_id_base = 69206016
+resource_id_mask = 2097151
+motion_buffer_size = 256
+vendor_len = 20
+max_req_len = 65535
+number_of_screens = 1
+number_for_formats_in_pixmap_fonts = 7
+image_byte_order = 0
+bitmap_format_bit_order = 0
+bitmap_format_scaline_unit = 32
+bitmap_format_scaline_pad = 32
+min_keycode = 8
+max_keycode = 255
+unused_2 = 0
+vendor = "The X.Org Foundation"
+format = XFormat { depth: 1, bits_per_pixel: 1, scanline_pad: 32, padding: [0, 0, 0, 0, 0] }
+format = XFormat { depth: 4, bits_per_pixel: 8, scanline_pad: 32, padding: [0, 0, 0, 0, 0] }
+format = XFormat { depth: 8, bits_per_pixel: 8, scanline_pad: 32, padding: [0, 0, 0, 0, 0] }
+format = XFormat { depth: 15, bits_per_pixel: 16, scanline_pad: 32, padding: [0, 0, 0, 0, 0] }
+format = XFormat { depth: 16, bits_per_pixel: 16, scanline_pad: 32, padding: [0, 0, 0, 0, 0] }
+format = XFormat { depth: 24, bits_per_pixel: 32, scanline_pad: 32, padding: [0, 0, 0, 0, 0] }
+format = XFormat { depth: 32, bits_per_pixel: 32, scanline_pad: 32, padding: [0, 0, 0, 0, 0] }
+[
+root = Atom(1727)
+default_colormap = 32
+white_pixel = 16777215
+black_pixel = 0
+current_input_masks = 14286899
+width_pixels = 3840
+height_pixels = 1080
+width_in_millimeters = 1016
+height_in_millimeters = 285
+min_installed_maps = 1
+max_installed_maps = 1
+root_visual = Atom(33)
+backing_stores = 1
+save_unders = 0
+root_depth = 24
+number_of_depths_in_allowed_depths = 7
+depth:
+	depth = 24
+	unused_0 = 0
+	number_of_visual_types = 480
+	unused_1 = 0
+	visuals:
+	[
+		visual_id = Atom(33)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(34)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1225)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1226)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1227)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1228)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1229)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1230)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1231)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1232)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1233)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1234)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1235)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1236)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1237)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1238)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1239)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1240)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1241)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1242)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1243)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1244)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1245)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1246)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1247)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1248)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1249)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1250)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1251)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1252)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1253)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1254)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1255)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1256)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1257)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1258)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1259)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1260)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1261)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1262)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1263)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1264)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1265)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1266)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1267)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1268)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1269)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1270)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1271)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1272)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1273)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1274)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1275)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1276)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1277)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1278)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1279)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1280)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1281)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1282)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1283)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1284)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1285)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1286)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1287)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1288)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1289)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1290)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1291)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1292)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1293)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1294)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1295)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1296)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1297)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1298)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1299)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1300)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1301)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1302)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1303)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1304)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1305)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1306)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1307)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1308)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1309)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1310)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1311)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1312)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1313)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1314)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1315)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1316)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1317)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1318)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1319)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1320)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1321)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1322)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1323)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1324)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1325)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1326)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1327)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1328)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1329)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1330)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1331)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1332)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1333)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1334)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1335)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1336)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1337)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1338)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1339)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1340)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1341)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1342)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1343)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1344)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1345)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1346)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1347)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1348)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1349)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1350)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1351)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1352)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1353)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1354)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1355)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1356)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1357)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1358)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1359)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1360)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1361)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1362)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1363)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1364)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1365)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1366)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1367)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1368)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1369)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1370)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1371)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1372)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1373)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1374)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1375)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1376)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1377)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1378)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1379)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1380)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1381)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1382)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1383)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1384)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1385)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1386)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1387)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1388)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1389)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1390)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1391)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1392)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1393)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1394)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1395)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1396)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1397)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1398)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1399)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1400)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1401)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1402)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1403)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1404)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1405)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1406)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1407)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1408)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1409)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1410)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1411)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1412)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1413)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1414)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1415)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1416)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1417)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1418)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1419)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1420)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1421)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1422)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1423)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1424)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1425)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1426)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1427)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1428)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1429)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1430)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1431)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1432)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1433)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1434)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1435)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1436)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1437)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1438)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1439)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1440)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1441)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1442)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1443)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1444)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1445)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1446)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1447)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1448)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1449)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1450)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1451)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1452)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1453)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1454)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1455)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1456)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1457)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1458)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1459)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1460)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1461)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1462)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1463)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1464)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1465)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1466)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1467)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1468)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1469)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1470)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1471)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1472)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1473)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1474)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1475)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1476)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1477)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1478)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1479)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1480)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1481)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1482)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1483)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1484)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1485)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1486)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1487)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1488)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1489)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1490)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1491)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1492)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1493)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1494)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1495)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1496)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1497)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1498)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1499)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1500)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1501)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1502)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1503)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1504)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1505)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1506)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1507)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1508)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1509)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1510)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1511)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1512)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1513)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1514)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1515)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1516)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1517)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1518)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1519)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1520)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1521)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1522)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1523)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1524)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1525)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1526)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1527)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1528)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1529)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1530)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1531)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1532)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1533)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1534)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1535)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1536)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1537)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1538)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1539)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1540)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1541)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1542)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1543)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1544)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1545)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1546)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1547)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1548)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1549)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1550)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1551)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1552)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1553)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1554)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1555)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1556)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1557)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1558)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1559)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1560)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1561)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1562)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1563)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1564)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1565)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1566)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1567)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1568)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1569)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1570)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1571)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1572)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1573)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1574)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1575)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1576)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1577)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1578)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1579)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1580)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1581)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1582)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1583)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1584)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1585)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1586)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1587)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1588)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1589)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1590)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1591)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1592)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1593)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1594)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1595)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1596)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1597)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1598)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1599)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1600)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1601)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1602)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1603)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1604)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1605)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1606)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1607)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1608)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1609)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1610)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1611)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1612)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1613)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1614)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1615)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1616)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1617)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1618)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1619)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1620)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1621)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1622)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1623)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1624)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1625)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1626)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1627)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1628)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1629)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1630)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1631)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1632)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1633)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1634)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1635)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1636)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1637)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1638)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1639)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1640)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1641)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1642)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1643)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1644)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1645)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1646)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1647)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1648)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1649)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1650)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1651)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1652)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1653)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1654)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1655)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1656)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1657)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1658)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1659)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1660)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1661)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1662)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1663)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1664)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1665)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1666)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1667)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1668)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1669)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1670)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1671)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1672)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1673)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1674)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1675)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1676)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1677)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1678)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1679)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1680)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1681)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1682)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1683)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1684)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1685)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1686)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1687)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1688)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1689)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1690)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1691)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1692)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1693)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1694)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1695)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1696)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1697)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1698)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1699)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1700)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1701)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1702)
+		class = DirectColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+	]
+depth:
+	depth = 1
+	unused_0 = 0
+	number_of_visual_types = 0
+	unused_1 = 0
+	visuals:
+	[
+	]
+depth:
+	depth = 4
+	unused_0 = 0
+	number_of_visual_types = 0
+	unused_1 = 0
+	visuals:
+	[
+	]
+depth:
+	depth = 8
+	unused_0 = 0
+	number_of_visual_types = 0
+	unused_1 = 0
+	visuals:
+	[
+	]
+depth:
+	depth = 15
+	unused_0 = 0
+	number_of_visual_types = 0
+	unused_1 = 0
+	visuals:
+	[
+	]
+depth:
+	depth = 16
+	unused_0 = 0
+	number_of_visual_types = 0
+	unused_1 = 0
+	visuals:
+	[
+	]
+depth:
+	depth = 32
+	unused_0 = 0
+	number_of_visual_types = 24
+	unused_1 = 0
+	visuals:
+	[
+		visual_id = Atom(120)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1703)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1704)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1705)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1706)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1707)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1708)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1709)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1710)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1711)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1712)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1713)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1714)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1715)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1716)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1717)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1718)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1719)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1720)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1721)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1722)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1723)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1724)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+		visual_id = Atom(1725)
+		class = TrueColor
+		bits_per_rgb_value = 8
+		colormap_entries = 256
+		red_mask = 16711680
+		green_mask = 65280
+		blue_mask = 255
+
+	]
+
+]
+

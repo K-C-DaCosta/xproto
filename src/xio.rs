@@ -14,6 +14,8 @@ where
     file.write_all(prim.as_bytes_le(&mut buffer))
 }
 
+
+
 pub fn read_primitive<T, Readable>(mut file: Readable) -> Result<T, std::io::Error>
 where
     T: Copy + Default + Sized,
@@ -34,9 +36,7 @@ pub fn read_primitive_list<Prim, Data: Read>(
 where
     Prim: Copy + Default + Sized,
 {
-    (0..len)
-        .map(|_| read_primitive(&mut socket))
-        .collect()
+    (0..len).map(|_| read_primitive(&mut socket)).collect()
 }
 
 pub fn read_ascii_string<Data: Read>(
@@ -64,6 +64,17 @@ pub fn read_padding<T: Read>(mut out: T, n: usize) -> Result<usize, std::io::Err
         out.read(&mut byte)?;
     }
     Ok(padding)
+}
+
+pub fn flush_read<T: Read>(mut file: T) -> Result<(), std::io::Error> {
+    let mut buffer = [0u8; 31];
+    loop {
+        let bytes_read = file.read(&mut buffer)?;
+        if bytes_read < buffer.len() || bytes_read == 0 {
+            break;
+        }
+    }
+    Ok(())
 }
 
 #[test]

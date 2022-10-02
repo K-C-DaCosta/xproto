@@ -1,329 +1,241 @@
-use std::fmt::Debug;
+use std::{fmt::Debug, io, mem::MaybeUninit, os::unix::net::UnixStream};
 
+pub const PATH_TO_UNIX_DOMAIN_SOCKET: &str = "/tmp/.X11-unix/X0";
 
-pub const PATH_TO_UNIX_DOMAIN_SOCKET:&str = "/tmp/.X11-unix/X0";
+/// code that deals with io for the x protocol
+pub mod xio;
 
+/// code makes the first connection to the server
+mod connection;
 
-pub mod io;
+/// module containing all xtypes
+mod xtypes;
 
-pub type INT8 = i8;
-pub type INT16 = i16;
-pub type INT32 = i32;
-pub type CARD8 = u8;
-pub type CARD16 = u16;
-pub type CARD32 = u32;
-pub type TIMESTAMP = CARD32;
-pub type BOOL = CARD8;
+/// module containing common x constants
+mod xconsts;
 
-// predefined atoms
-pub const SECONDARY: Atom = Atom(2);
-pub const ARC: Atom = Atom(3);
-pub const ATOM: Atom = Atom(4);
-pub const BITMAP: Atom = Atom(5);
-pub const CARDINAL: Atom = Atom(6);
-pub const COLORMAP: Atom = Atom(7);
-pub const CURSOR: Atom = Atom(8);
-pub const CUT_BUFFER: Atom = Atom(0);
-pub const CUT_BUFFER1: Atom = Atom(10);
-pub const CUT_BUFFER2: Atom = Atom(11);
-pub const CUT_BUFFER3: Atom = Atom(12);
-pub const CUT_BUFFER4: Atom = Atom(13);
-pub const CUT_BUFFER5: Atom = Atom(14);
-pub const CUT_BUFFER6: Atom = Atom(15);
-pub const CUT_BUFFER7: Atom = Atom(16);
-pub const DRAWABLE: Atom = Atom(17);
-pub const FONT: Atom = Atom(18);
-pub const INTEGER: Atom = Atom(19);
-pub const PIXMAP: Atom = Atom(20);
-pub const POINT: Atom = Atom(21);
-pub const RECTANGLE: Atom = Atom(22);
-pub const RESOURCE_MANAGER: Atom = Atom(23);
-pub const RGB_COLOR_MAP: Atom = Atom(24);
-pub const RGB_BEST_MAP: Atom = Atom(25);
-pub const RGB_BLUE_MAP: Atom = Atom(26);
-pub const RGB_DEFAULT_MAP: Atom = Atom(27);
-pub const RGB_GRAY_MAP: Atom = Atom(28);
-pub const RGB_GREEN_MAP: Atom = Atom(29);
-pub const RGB_RED_MAP: Atom = Atom(30);
-pub const STRING: Atom = Atom(31);
-pub const VISUALID: Atom = Atom(32);
-pub const WINDOW: Atom = Atom(33);
-pub const WM_COMMAND: Atom = Atom(34);
-pub const WM_HINTS: Atom = Atom(35);
-pub const WM_CLIENT_MACHINE: Atom = Atom(36);
-pub const WM_ICON_NAME: Atom = Atom(37);
-pub const WM_ICON_SIZE: Atom = Atom(38);
-pub const WM_NAME: Atom = Atom(39);
-pub const PRIMARY: Atom = Atom(1);
-pub const WM_NORMAL_HINTS: Atom = Atom(40);
-pub const WM_SIZE_HINTS: Atom = Atom(41);
-pub const WM_ZOOM_HINTS: Atom = Atom(42);
-pub const MIN_SPACE: Atom = Atom(43);
-pub const NORM_SPACE: Atom = Atom(44);
-pub const MAX_SPACE: Atom = Atom(45);
-pub const END_SPACE: Atom = Atom(46);
-pub const SUPERSCRIPT_X: Atom = Atom(47);
-pub const SUPERSCRIPT_Y: Atom = Atom(48);
-pub const SUBSCRIPT_X: Atom = Atom(49);
-pub const SUBSCRIPT_Y: Atom = Atom(50);
-pub const UNDERLINE_POSITION: Atom = Atom(51);
-pub const UNDERLINE_THICKNESS: Atom = Atom(52);
-pub const STRIKEOUT_ASCENT: Atom = Atom(53);
-pub const STRIKEOUT_DESCENT: Atom = Atom(54);
-pub const ITALIC_ANGLE: Atom = Atom(55);
-pub const X_HEIGHT: Atom = Atom(56);
-pub const QUAD_WIDTH: Atom = Atom(57);
-pub const WEIGHT: Atom = Atom(58);
-pub const POINT_SIZE: Atom = Atom(59);
-pub const RESOLUTION: Atom = Atom(60);
-pub const COPYRIGHT: Atom = Atom(61);
-pub const NOTICE: Atom = Atom(62);
-pub const FONT_NAME: Atom = Atom(63);
-pub const FAMILY_NAME: Atom = Atom(64);
-pub const FULL_NAME: Atom = Atom(65);
-pub const CAP_HEIGHT: Atom = Atom(66);
-pub const WM_CLASS: Atom = Atom(67);
-pub const WM_TRANSIENT_FOR: Atom = Atom(68);
+use xio::write_primitive;
 
-#[derive(Copy, Clone, Debug)]
-pub enum XClass {
-    StaticGray = 0,
-    GrayScale = 1,
-    StaticColor = 2,
-    PseudoColor = 3,
-    TrueColor = 4,
-    DirectColor = 5,
-    Unknown = 6,
+pub use self::{connection::*, xconsts::*, xtypes::*};
+
+#[derive(Debug, Clone)]
+pub enum XErrorKind {
+    Request,
+    Value { bad_val: CARD32 },
+    Window { bad_id: CARD32 },
+    Pixmap { bad_id: CARD32 },
+    Atom { bad_id: CARD32 },
+    Cursor { bad_id: CARD32 },
+    Font { bad_id: CARD32 },
+    Match,
+    Drawable { bad_id: CARD32 },
+    Access,
+    Alloc,
+    ColorMap { bad_id: CARD32 },
+    GContext { bad_id: CARD32 },
+    IDChoice { bad_id: CARD32 },
+    Name,
+    Length,
+    Implmentation,
+    Unknown,
 }
 
-impl Default for XClass {
-    fn default() -> Self {
-        Self::Unknown
-    }
+#[derive(Debug, Clone)]
+pub struct XError {
+    sequence_number: CARD16,
+    major: CARD8,
+    minor: CARD16,
+    kind: XErrorKind,
 }
-impl XClass {
-    pub fn from_class_code(code: CARD8) -> Self {
-        match code {
-            0 => Self::StaticGray,
-            1 => Self::GrayScale,
-            2 => Self::StaticColor,
-            3 => Self::PseudoColor,
-            4 => Self::TrueColor,
-            5 => Self::DirectColor,
-            _ => panic!("invalid class code, io may contain a bug"),
+
+impl XError {
+    pub fn from_header(header: XErrorHeader) -> Self {
+        let mut res_uninit = MaybeUninit::<Self>::zeroed();
+        assert_eq!(header.error, 0, "first byte should always be zero");
+        unsafe {
+            let res = res_uninit.assume_init_mut();
+            res.sequence_number = header.sequence_number;
+            res.major = header.major;
+            res.minor = header.minor;
+            let bad_id = header.bad_id_or_value;
+            res.kind = match header.code {
+                1 => XErrorKind::Request,
+                2 => XErrorKind::Value { bad_val: bad_id },
+                3 => XErrorKind::Window { bad_id },
+                4 => XErrorKind::Pixmap { bad_id },
+                5 => XErrorKind::Atom { bad_id },
+                6 => XErrorKind::Cursor { bad_id },
+                7 => XErrorKind::Font { bad_id },
+                8 => XErrorKind::Match,
+                9 => XErrorKind::Drawable { bad_id },
+                10 => XErrorKind::Access,
+                11 => XErrorKind::Alloc,
+                12 => XErrorKind::ColorMap { bad_id },
+                13 => XErrorKind::GContext { bad_id },
+                14 => XErrorKind::IDChoice { bad_id },
+                15 => XErrorKind::Name,
+                16 => XErrorKind::Length,
+                17 => XErrorKind::Implmentation,
+                _ => panic!("encountered unknown error"),
+            };
+
+            res_uninit.assume_init_read()
         }
-    }
-}
-
-#[derive(Copy, Clone, Default)]
-pub struct XVisualType {
-    pub visual_id: Atom,
-    pub class: XClass,
-    pub bits_per_rgb_value: CARD8,
-    pub colormap_entries: CARD16,
-    pub red_mask: CARD32,
-    pub green_mask: CARD32,
-    pub blue_mask: CARD32,
-}
-
-impl XVisualType {
-    pub fn from_intermediate(inter: XVisualTypeIntermediate) -> Self {
-        let visual_id = inter.visual_id;
-        let class = XClass::from_class_code(inter.class);
-        let bits_per_rgb_value = inter.bits_per_rgb_value;
-        let colormap_entries = inter.colormap_entries;
-        let red_mask = inter.red_mask;
-        let green_mask = inter.green_mask;
-        let blue_mask = inter.blue_mask;
-        Self {
-            visual_id,
-            class,
-            bits_per_rgb_value,
-            colormap_entries,
-            red_mask,
-            green_mask,
-            blue_mask,
-        }
-    }
-}
-impl Debug for XVisualType {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let visual_id = self.visual_id;
-        let class = self.class;
-        let bits_per_rgb_value = self.bits_per_rgb_value;
-        let colormap_entries = self.colormap_entries;
-        let red_mask = self.red_mask;
-        let green_mask = self.green_mask;
-        let blue_mask = self.blue_mask;
-        writeln!(f, "\t\tvisual_id = {:?}", visual_id)?;
-        writeln!(f, "\t\tclass = {:?}", class)?;
-        writeln!(f, "\t\tbits_per_rgb_value = {:?}", bits_per_rgb_value)?;
-        writeln!(f, "\t\tcolormap_entries = {:?}", colormap_entries)?;
-        writeln!(f, "\t\tred_mask = {}", red_mask)?;
-        writeln!(f, "\t\tgreen_mask = {:?}", green_mask)?;
-        writeln!(f, "\t\tblue_mask = {:?}", blue_mask)?;
-        Ok(())
     }
 }
 
 #[repr(C, packed(1))]
-#[derive(Copy, Clone, Default)]
-pub struct XVisualTypeIntermediate {
-    visual_id: Atom,
-    class: CARD8,
-    bits_per_rgb_value: CARD8,
-    colormap_entries: CARD16,
-    red_mask: CARD32,
-    green_mask: CARD32,
-    blue_mask: CARD32,
-    unused: CARD32,
+#[derive(Copy, Clone, Default, Debug)]
+pub struct XErrorHeader {
+    error: CARD8,
+    code: CARD8,
+    sequence_number: CARD16,
+    bad_id_or_value: CARD32,
+    minor: CARD16,
+    major: CARD8,
+    padding: [u8; 21],
 }
 
-#[derive(Clone, Default)]
-pub struct XDepth {
+#[repr(C, packed(1))]
+#[derive(Copy, Clone, Default)]
+pub struct WindowValue {
+    background_pixmap: Atom,
+    background_pixel: CARD32,
+    border_pixmap: Atom,
+    border_pixel: CARD32,
+    bit_gravity: CARD8,
+    win_gravity: CARD8,
+    backing_store: CARD8,
+    backing_planes: CARD32,
+    backing_pixel: CARD32,
+    override_redirect: CARD8,
+    save_under: CARD8,
+    event_mask: CARD32,
+    do_not_propagate_mask: CARD32,
+    colormap: CARD32,
+    cursor: CARD32,
+}
+
+pub struct WindowBuilder<'a, T> {
+    ctx: &'a mut XContext<T>,
+    opcode: CARD8,
     depth: CARD8,
-    unused_0: CARD8,
-    number_of_visual_types: CARD16,
-    unused_1: CARD32,
-    visuals: Vec<XVisualType>,
+    request_length: CARD16,
+    wid: Atom,
+    parent: Atom,
+    x: INT16,
+    y: INT16,
+    width: CARD16,
+    height: CARD16,
+    border_width: CARD16,
+    class: CARD16,
+    visual: Atom,
+    value_mask: CARD32,
+    value_list: Vec<WindowValue>,
+    window_id: Atom,
 }
-impl XDepth {
-    pub fn from_socket<T: std::io::Read>(mut socket: T) -> std::io::Result<Self> {
-        let mut res = Self::default();
-        res.depth = io::read_primitive(&mut socket)?;
-        res.unused_0 = io::read_primitive(&mut socket)?;
-        res.number_of_visual_types = io::read_primitive(&mut socket)?;
-        res.unused_1 = io::read_primitive(&mut socket)?;
-        res.visuals = io::read_primitive_list::<XVisualTypeIntermediate, _>(
-            &mut socket,
-            res.number_of_visual_types as usize,
-        )?
-        .into_iter()
-        .map(|a| XVisualType::from_intermediate(a))
-        .collect();
-        Ok(res)
-    }
-}
-impl Debug for XDepth {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        writeln!(f, "\tdepth = {:?}", self.depth)?;
-        writeln!(f, "\tunused_0 = {:?}", self.unused_0)?;
-        writeln!(
-            f,
-            "\tnumber_of_visual_types = {:?}",
-            self.number_of_visual_types
-        )?;
-        writeln!(f, "\tunused_1 = {:?}", self.unused_1)?;
+impl<'a, T> WindowBuilder<'a, T>
+where
+    T: io::Write + io::Read,
+{
+    pub fn new(state: &'a mut XContext<T>) -> Self {
+        let mut res_unitit = MaybeUninit::<Self>::zeroed();
+        let window_id = Atom(state.gen_id());
+        unsafe {
+            let res = res_unitit.assume_init_mut();
+            res.window_id = window_id;
+            res.opcode = 1;
+            res.request_length = 8;
+            res.wid = window_id;
+            res.parent = state.info.list_of_screen[0].root;
+            res.depth = 0;
+            res.border_width = 0;
+            res.class = 0;
+            res.visual = Atom(0); //copy from parent
+            res.value_mask = 0;
+            res.value_list = vec![];
+            res.ctx = state;
 
-        write!(f, "\tvisuals:\n\t[\n")?;
-        for visual in &self.visuals {
-            writeln!(f, "{:?}", visual)?;
+            res_unitit.assume_init_read()
         }
-        write!(f, "\t]")
     }
-}
 
-#[derive(Clone, Default)]
-pub struct XScreen {
-    root: Atom,
-    default_colormap: CARD32,
-    white_pixel: CARD32,
-    black_pixel: CARD32,
-    current_input_masks: CARD32,
-    width_pixels: CARD16,
-    height_pixels: CARD16,
-    width_in_millimeters: CARD16,
-    height_in_millimeters: CARD16,
-    min_installed_maps: CARD16,
-    max_installed_maps: CARD16,
-    root_visual: Atom,
-    backing_stores: CARD8,
-    save_unders: BOOL,
-    root_depth: CARD8,
-    number_of_depths_in_allowed_depths: CARD8,
-    depth_list: Vec<XDepth>,
-}
-impl Debug for XScreen {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        writeln!(f, "root = {:?}", self.root)?;
-        writeln!(f, "default_colormap = {:?}", self.default_colormap)?;
-        writeln!(f, "white_pixel = {:?}", self.white_pixel)?;
-        writeln!(f, "black_pixel = {:?}", self.black_pixel)?;
-        writeln!(f, "current_input_masks = {:?}", self.current_input_masks)?;
-        writeln!(f, "width_pixels = {:?}", self.width_pixels)?;
-        writeln!(f, "height_pixels = {:?}", self.height_pixels)?;
-        writeln!(f, "width_in_millimeters = {:?}", self.width_in_millimeters)?;
-        writeln!(
-            f,
-            "height_in_millimeters = {:?}",
-            self.height_in_millimeters
-        )?;
-        writeln!(f, "min_installed_maps = {:?}", self.min_installed_maps)?;
-        writeln!(f, "max_installed_maps = {:?}", self.max_installed_maps)?;
-        writeln!(f, "root_visual = {:?}", self.root_visual)?;
-        writeln!(f, "backing_stores = {:?}", self.backing_stores)?;
-        writeln!(f, "save_unders = {:?}", self.save_unders)?;
-        writeln!(f, "root_depth = {:?}", self.root_depth)?;
-        writeln!(
-            f,
-            "number_of_depths_in_allowed_depths = {:?}",
-            self.number_of_depths_in_allowed_depths
-        )?;
+    pub fn with_pos(mut self, pos: (i16, i16)) -> Self {
+        self.x = pos.0;
+        self.y = pos.1;
+        self
+    }
 
-        for depth in &self.depth_list {
-            writeln!(f, "depth:\n{:?}", depth)?;
+    pub fn with_height(mut self, val: CARD16) -> Self {
+        self.height = val;
+        self
+    }
+
+    pub fn with_width(mut self, val: CARD16) -> Self {
+        self.width = val;
+        self
+    }
+
+    pub fn with_visual(mut self, val: CARD32) -> Self {
+        self.visual.0 = val;
+        self
+    }
+
+    pub fn with_value(mut self, value: WindowValue) -> Self {
+        self.request_length += 1;
+        self.value_list.push(value);
+        self
+    }
+
+    pub fn build(self) -> Result<(), io::Error> {
+        {
+            xio::write_primitive(&mut self.ctx.socket, self.opcode)?;
+            xio::write_primitive(&mut self.ctx.socket, self.depth)?;
+            xio::write_primitive(&mut self.ctx.socket, self.request_length)?;
+            xio::write_primitive(&mut self.ctx.socket, self.wid)?;
+            xio::write_primitive(&mut self.ctx.socket, self.parent)?;
+            xio::write_primitive(&mut self.ctx.socket, self.x)?;
+            xio::write_primitive(&mut self.ctx.socket, self.y)?;
+            xio::write_primitive(&mut self.ctx.socket, self.width)?;
+            xio::write_primitive(&mut self.ctx.socket, self.height)?;
+            xio::write_primitive(&mut self.ctx.socket, self.border_width)?;
+            xio::write_primitive(&mut self.ctx.socket, self.class)?;
+            xio::write_primitive(&mut self.ctx.socket, self.visual)?;
+            xio::write_primitive(&mut self.ctx.socket, self.value_mask)?;
         }
+        if let Ok(header) = xio::read_primitive::<XErrorHeader, _>(&mut self.ctx.socket) {
+            let err = XError::from_header(header);
+            println!("err = {:?}", err);
+        } else {
+            println!("no errors");
+        }
+
+        map_window(&mut self.ctx.socket, self.window_id.0)?;
 
         Ok(())
     }
 }
 
-impl XScreen {
-    pub fn from_socket<T: std::io::Read>(
-        mut socket: T,
-        number_of_formats: usize,
-    ) -> std::io::Result<Self> {
-        let mut res = Self::default();
-        res.root = io::read_primitive(&mut socket)?;
-        res.default_colormap = io::read_primitive(&mut socket)?;
-        res.white_pixel = io::read_primitive(&mut socket)?;
-        res.black_pixel = io::read_primitive(&mut socket)?;
-        res.current_input_masks = io::read_primitive(&mut socket)?;
-        res.width_pixels = io::read_primitive(&mut socket)?;
-        res.height_pixels = io::read_primitive(&mut socket)?;
-        res.width_in_millimeters = io::read_primitive(&mut socket)?;
-        res.height_in_millimeters = io::read_primitive(&mut socket)?;
-        res.min_installed_maps = io::read_primitive(&mut socket)?;
-        res.max_installed_maps = io::read_primitive(&mut socket)?;
-        res.root_visual = io::read_primitive(&mut socket)?;
-        res.backing_stores = io::read_primitive(&mut socket)?;
-        res.save_unders = io::read_primitive(&mut socket)?;
-        res.root_depth = io::read_primitive(&mut socket)?;
-        res.number_of_depths_in_allowed_depths = io::read_primitive(&mut socket)?;
-        res.depth_list = (0..number_of_formats)
-            .map(|_| XDepth::from_socket(&mut socket))
-            .collect::<Result<Vec<_>, _>>()?;
-        Ok(res)
+pub struct XContext<Socket> {
+    socket: Socket,
+    id_count: CARD32,
+    info: connection::ConnectionAcceptedInfo,
+}
+impl<Socket: io::Read + io::Write> XContext<Socket> {
+    pub fn gen_id(&mut self) -> CARD32 {
+        let id = self.id_count;
+        self.id_count += 1;
+        id | self.info.resource_id_base
+    }
+
+    pub fn create_window(&mut self) -> WindowBuilder<'_, Socket> {
+        WindowBuilder::new(self)
     }
 }
 
-#[repr(C, packed(1))]
-#[derive(Copy, Clone, Default, Debug)]
-pub struct XFormat {
-    pub depth: CARD8,
-    pub bits_per_pixel: CARD8,
-    pub scanline_pad: CARD8,
-    pub padding: [u8; 5],
-}
-
-#[repr(C, packed(1))]
-#[derive(Copy, Clone, Default, Debug)]
-pub struct Atom(pub CARD32);
-
-const ATOM_MASK: u32 = (1 << 29) - 1;
-
-impl<T: Into<u32>> From<T> for Atom {
-    fn from(val: T) -> Self {
-        Self(val.into() & ATOM_MASK)
-    }
+pub fn map_window<S: io::Write>(mut socket: S, window_id: CARD32) -> io::Result<()> {
+    write_primitive(&mut socket, 8u8)?;
+    write_primitive(&mut socket, 0u8)?;
+    write_primitive(&mut socket, 2u16)?;
+    write_primitive(&mut socket, window_id)
 }
