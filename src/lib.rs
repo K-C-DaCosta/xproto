@@ -1,5 +1,9 @@
 use std::fmt::Debug;
 
+
+pub const PATH_TO_UNIX_DOMAIN_SOCKET:&str = "/tmp/.X11-unix/X0";
+
+
 pub mod io;
 
 pub type INT8 = i8;

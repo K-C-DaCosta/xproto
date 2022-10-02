@@ -265,9 +265,7 @@ impl<'a> RequestConnection<'a> {
 }
 
 fn main() {
-    let mut xserver = UnixStream::connect("/tmp/.X11-unix/X0").expect("cant connect to xserver");
-
+    let mut xserver = UnixStream::connect(PATH_TO_UNIX_DOMAIN_SOCKET).expect("cant connect to xserver");
     let req = RequestConnection::new(ByteOrder::LittleEndian, 11, 0, &"", &"");
-
     req.make_connection(&mut xserver).unwrap();
 }
