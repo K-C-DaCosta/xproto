@@ -6,7 +6,7 @@ mod hasbytes;
 
 pub use hasbytes::*;
 
-pub fn write_primitive<T, Writable: Write>(mut file: Writable, prim: T) -> io::Result<()>
+pub fn write_primitive<T, Writable: Write>(file: &mut Writable, prim: T) -> io::Result<()>
 where
     T: HasBytes,
 {
@@ -14,9 +14,15 @@ where
     file.write_all(prim.as_bytes_le(&mut buffer))
 }
 
+pub fn write_primitive_alt<T, Writable: Write>(file: &mut Writable, prim: T) -> io::Result<()>
+where
+    T: HasBytes,
+{
+    let mut buffer = [0u8; 16];
+    file.write_all(prim.as_bytes_le(&mut buffer))
+}
 
-
-pub fn read_primitive<T, Readable>(mut file: Readable) -> Result<T, std::io::Error>
+pub fn read_primitive<T, Readable>(file: &mut Readable) -> Result<T, std::io::Error>
 where
     T: Copy + Default + Sized,
     Readable: Read,
@@ -30,13 +36,13 @@ where
 }
 
 pub fn read_primitive_list<Prim, Data: Read>(
-    mut socket: Data,
+    socket: &mut Data,
     len: usize,
 ) -> Result<Vec<Prim>, std::io::Error>
 where
     Prim: Copy + Default + Sized,
 {
-    (0..len).map(|_| read_primitive(&mut socket)).collect()
+    (0..len).map(|_| read_primitive(socket)).collect()
 }
 
 pub fn read_ascii_string<Data: Read>(
@@ -48,7 +54,7 @@ pub fn read_ascii_string<Data: Read>(
         .collect()
 }
 
-pub fn write_padding<T: Write>(n: usize, mut out: T) -> Result<usize, std::io::Error> {
+pub fn write_padding<T: Write>(n: usize, out: &mut T) -> Result<usize, std::io::Error> {
     let padding = (4 - n % 4) % 4;
     for _ in 0..padding {
         out.write(&[0])?;

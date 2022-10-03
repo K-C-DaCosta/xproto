@@ -3,10 +3,45 @@ use super::*;
 mod create_window;
 pub use create_window::value_masks;
 
-pub mod opcodes{
-    pub const CREATE_WINDOW:u8 = 1; 
-    pub const MAP_WINDOW:u8 = 8; 
-    pub const CHANGE_PROPERTY:u8 = 18;
+pub mod set_of_events_common {
+    pub const KEY_PRESS: u16 = 0x00000001;
+    pub const KEY_RELEASE: u16 = 0x00000002;
+    pub const BUTTON_PRESS: u16 = 0x00000004;
+    pub const BUTTON_RELEASE: u16 = 0x00000008;
+    pub const ENTER_WINDOW: u16 = 0x00000010;
+    pub const LEAVE_WINDOW: u16 = 0x00000020;
+    pub const POINTER_MOTION: u16 = 0x00000040;
+    pub const POINTER_MOTION_HINT: u16 = 0x00000080;
+    pub const BUTTON1_MOTION: u16 = 0x00000100;
+    pub const BUTTON2_MOTION: u16 = 0x00000200;
+    pub const BUTTON3_MOTION: u16 = 0x00000400;
+    pub const BUTTON4_MOTION: u16 = 0x00000800;
+    pub const BUTTON5_MOTION: u16 = 0x00001000;
+    pub const BUTTON_MOTION: u16 = 0x00002000;
+    pub const KEYMAP_STATE: u16 = 0x00004000;
+    pub const EXPOSURE: u16 = 0x00008000;
+    pub const VISIBILITY_CHANGE: u32 = 0x00010000;
+    pub const STRUCTURE_NOTIFY: u32 = 0x00020000;
+    pub const RESIZE_REDIRECT: u32 = 0x00040000;
+    pub const SUBSTRUCTURE_NOTIFY: u32 = 0x00080000;
+    pub const SUBSTRUCTURE_REDIRECT: u32 = 0x00100000;
+    pub const FOCUS_CHANGE: u32 = 0x00200000;
+    pub const PROPERTY_CHANGE: u32 = 0x00400000;
+    pub const COLORMAP_CHANGE: u32 = 0x00800000;
+    pub const OWNER_GRAB_BUTTON: u32 = 0x01000000;
+    pub const UNUSED_EVENT: u32 = 0xFE000000;
+    pub const UNUSED_POINTER: u32 = 0xfff8003;
+}
+
+pub mod opcodes {
+    pub const CREATE_WINDOW: u8 = 1;
+    pub const MAP_WINDOW: u8 = 8;
+    pub const CHANGE_PROPERTY: u8 = 18;
+    pub const GRAB_BUTTON: u8 = 28;
+    pub const GRAB_KEYBOARD: u8 = 31;
+    pub const UNGRAB_KEYBOARD: u8 = 32;
+    pub const ALLOW_EVENTS: u8 = 35;
+    pub const GRAB_KEY: u8 = 33;
 }
 
 pub mod predefined_atoms {

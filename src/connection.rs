@@ -239,12 +239,12 @@ impl<'a> RequestConnection<'a> {
         }
     }
     pub fn connect<T: Write + Read>(self, mut sock: T) -> ConnectionResult<XContext<T>> {
-        self.write_to(&mut sock)?;
+        self.send_request_to_connect(&mut sock)?;
         let resp = self.read_response(&mut sock)?;
-        Ok(XContext{
-            id_count:0,
-            socket:sock,
-            info:resp 
+        Ok(XContext {
+            id_count: Cell::new(0),
+            socket: Rc::new(RefCell::new(sock)),
+            info: Rc::new(resp),
         })
     }
     fn read_response<T: Read>(
@@ -254,6 +254,9 @@ impl<'a> RequestConnection<'a> {
         let connection_status = ConnectionStatus::from_code(xio::read_primitive(&mut socket)?);
 
         match connection_status {
+            ConnectionStatus::Accepted => {
+                ConnectionAcceptedInfo::from_socket(&mut socket).map_err(|e| e.into())
+            }
             ConnectionStatus::Failed => {
                 let length_of_reason = xio::read_primitive::<CARD8, _>(&mut socket)?;
                 let major = xio::read_primitive::<CARD16, _>(&mut socket)?;
@@ -261,17 +264,11 @@ impl<'a> RequestConnection<'a> {
                 let _addition_data_len_4b = xio::read_primitive::<CARD16, _>(&mut socket)?;
                 let reason = xio::read_ascii_string(&mut socket, length_of_reason as usize)?;
                 xio::read_padding(socket, length_of_reason as usize)?;
-
                 Err(ConnectionErr::ConnectionRefused(RefusedInfo {
                     reason,
                     major,
                     minor,
                 }))
-            }
-            ConnectionStatus::Accepted => {
-                let info = ConnectionAcceptedInfo::from_socket(&mut socket)?;
-                println!("{:?}", info);
-                Ok(info)
             }
             ConnectionStatus::AuthenticationNeeded => {
                 unimplemented!("auth not implemented")
@@ -279,7 +276,7 @@ impl<'a> RequestConnection<'a> {
         }
     }
 
-    fn write_to<T: Write>(&self, mut out: T) -> Result<(), std::io::Error> {
+    fn send_request_to_connect<T: Write>(&self, mut out: T) -> Result<(), std::io::Error> {
         out.write([self.order as u8, 0].as_slice())?;
         xio::write_primitive(&mut out, self.major)?;
         xio::write_primitive(&mut out, self.minor)?;

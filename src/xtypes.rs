@@ -6,8 +6,25 @@ pub type INT32 = i32;
 pub type CARD8 = u8;
 pub type CARD16 = u16;
 pub type CARD32 = u32;
-pub type TIMESTAMP = CARD32;
 pub type BOOL = CARD8;
+pub type WINDOW = Atom;
+
+#[derive(Clone, Copy, Default, PartialEq, Eq, PartialOrd, Ord, Debug)]
+pub struct Timestamp(CARD32);
+
+impl Timestamp {
+    pub fn current_time() -> Self {
+        Timestamp(0)
+    }
+    pub fn data(&self) -> CARD32 {
+        self.0
+    }
+}
+impl Into<CARD32> for Timestamp {
+    fn into(self) -> CARD32 {
+        self.data()
+    }
+}
 
 #[derive(Copy, Clone, Debug)]
 pub enum XClass {
