@@ -98,47 +98,44 @@ impl XErrorKind {
         }
     }
     pub fn from_header(header: XErrorHeader) -> Result<(), Self> {
-        let mut res_uninit = MaybeUninit::<Self>::zeroed();
         if header.error != 0 {
-            //error not detected
+            // header.error should always be zero
+            // therefore incoming data is not an error
             return Ok(());
         }
-
+        
         let generic = XErrorGeneric {
             sequence_number: header.sequence_number,
             major: header.major,
             minor: header.minor,
         };
 
-        unsafe {
-            let res = res_uninit.assume_init_mut();
-
-            let bad_id = header.bad_id_or_value;
-            match header.code {
-                01 => XErrorKind::Request { generic },
-                02 => XErrorKind::Value {
-                    generic,
-                    bad_val: bad_id,
-                },
-                03 => XErrorKind::Window { generic, bad_id },
-                04 => XErrorKind::Pixmap { generic, bad_id },
-                05 => XErrorKind::Atom { generic, bad_id },
-                06 => XErrorKind::Cursor { generic, bad_id },
-                07 => XErrorKind::Font { generic, bad_id },
-                08 => XErrorKind::Match { generic },
-                09 => XErrorKind::Drawable { generic, bad_id },
-                10 => XErrorKind::Access { generic },
-                11 => XErrorKind::Alloc { generic },
-                12 => XErrorKind::ColorMap { generic, bad_id },
-                13 => XErrorKind::GContext { generic, bad_id },
-                14 => XErrorKind::IDChoice { generic, bad_id },
-                15 => XErrorKind::Name { generic },
-                16 => XErrorKind::Length { generic },
-                17 => XErrorKind::Implmentation { generic },
-                _ => Self::Unknown,
-            };
-            Err(res_uninit.assume_init_read())
-        }
+        let bad_id = header.bad_id_or_value;
+        
+        let err_kind = match header.code {
+            01 => XErrorKind::Request { generic },
+            02 => XErrorKind::Value {
+                generic,
+                bad_val: bad_id,
+            },
+            03 => XErrorKind::Window { generic, bad_id },
+            04 => XErrorKind::Pixmap { generic, bad_id },
+            05 => XErrorKind::Atom { generic, bad_id },
+            06 => XErrorKind::Cursor { generic, bad_id },
+            07 => XErrorKind::Font { generic, bad_id },
+            08 => XErrorKind::Match { generic },
+            09 => XErrorKind::Drawable { generic, bad_id },
+            10 => XErrorKind::Access { generic },
+            11 => XErrorKind::Alloc { generic },
+            12 => XErrorKind::ColorMap { generic, bad_id },
+            13 => XErrorKind::GContext { generic, bad_id },
+            14 => XErrorKind::IDChoice { generic, bad_id },
+            15 => XErrorKind::Name { generic },
+            16 => XErrorKind::Length { generic },
+            17 => XErrorKind::Implmentation { generic },
+            _ => Self::Unknown,
+        };
+        Err(err_kind)
     }
 }
 impl From<io::Error> for XErrorKind {
@@ -158,8 +155,6 @@ pub struct XErrorHeader {
     major: CARD8,
     padding: [u8; 21],
 }
-
-
 
 pub fn check_for_error<S: io::Read>(sock: &mut S) -> Result<(), XErrorKind> {
     match xio::read_primitive::<XErrorHeader, _>(sock) {

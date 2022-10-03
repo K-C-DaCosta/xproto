@@ -171,18 +171,18 @@ impl From<std::io::Error> for ConnectionErr {
 
 #[derive(Debug, Default)]
 pub struct RefusedInfo {
-    reason: String,
-    major: CARD16,
-    minor: CARD16,
+    pub reason: String,
+    pub major: CARD16,
+    pub minor: CARD16,
 }
 
 #[derive(Default)]
 pub struct ConnectionResponse {
-    reason_failed_length: u8,
-    protocol_major: CARD16,
-    protocol_minor: CARD16,
-    additional_data: CARD16,
-    reason: String,
+    pub reason_failed_length: u8,
+    pub protocol_major: CARD16,
+    pub protocol_minor: CARD16,
+    pub additional_data: CARD16,
+    pub reason: String,
 }
 
 impl ConnectionResponse {
