@@ -9,7 +9,6 @@ After doing a bit of research on windowing I learned that there is a server proc
 - I figured out where the unix socket was located here: https://www.x.org/releases/X11R7.7/doc/man/man1/Xserver.1.xhtml
     - I tried to connect to it via TCP socket, but AFAIK, that is actually disabled by default and you must enable it in config files somewhere 
 
-
 ## How to run an example
 There's currenly only one example.
 clone the repo then do:
